@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "AboutUs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .activee{
+        font-size: 120%;
+        color: white;
+    }
+    .page-headerr{
+        color:white;
+        font-weight: bold;
+    }
+    .contact_info{
+        color:white;
+    }
+
+
+    .main-content {
+        background-color: #0B274C;
+        margin-top: -20px;
+        width: auto;
+        position: relative;
+        padding: 30px 50px;
+    }
+     #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        max-width: 120%;
+        max-height: 120%;
+        min-width: 100%;
+        min-width: 100%;
+    }
+     .modal-footer{
+         text-align: center;
+         color:ghostwhite;
+     }
+</style>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="~/Content/images/No Copyright, Copyright Free Videos, Motion Graphics, Background, Animation, Video Clips, Download (1).mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="main-content">
+        <h2 class="page-headerr">About Us</h2><br />
+        <div>
+            <text class="activee">
+                Our company is well repuated company among competitors. If you have any enquiry or complaints please get in touch with us.
+            </text>
+        </div><hr />
+        <div>
+            <p class="contact_info">
+                Phone: 0226390067<br />
+                Phone: 0225874058<br />
+                Email: info@techofab.com<br />
+            </p>
+            <a href="~/Registration/Index"> Get in contact with us </a>
+        </div>
+        <div>
+            <p class="modal-footer"> Website designed and developed by Tanveer Rajpal</p>
+        </div>
+    </div>
+</body>
+

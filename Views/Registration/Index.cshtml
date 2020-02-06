@@ -1,0 +1,120 @@
+﻿@model Techofab_Website.Models.CustomerDetails
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .description {
+        font-size: 150%;
+        color: white;
+    }
+    body{
+        background-image: url('../../Content/images/25.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        
+    }
+    .main-content {
+        background-color:#0F3140;
+        margin: auto;
+        padding: 30px 50px;
+        position: relative;
+    }
+    .form-group{
+        color:white;
+    }
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        max-width: 120%;
+        max-height: 120%;
+        min-width: 100%;
+        min-width: 100%;
+    }
+    
+</style>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="~/Content/videos/y2mate.com - technology_network_loop_background_blue_animated_lines_backgrounds_KFqsdtEabk0_1080p.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="main-content">
+        <h2 style="color:white; font-weight: bold">Registration</h2><br />
+
+        @using (Html.BeginForm("Index", "Registration", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h4 style="color:white; font-weight: bold">Student Details</h4><br />
+                <text class="description">Please enter you details below. One of our team member will get in touch with you within 24 hours.</text>
+                <hr /><br />
+
+                @ViewData["Error"]
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Fname, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Fname, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Fname, "", new { @class = "text-danger" })
+                    </div>
+                </div><br />
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Lname, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Lname, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Lname, "", new { @class = "text-danger" })
+                    </div>
+                </div><br />
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Contact, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Contact, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Contact, "", new { @class = "text-danger" })
+                    </div>
+                </div><br />
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div><br />
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Courseinterested, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Courseinterested, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Courseinterested, "", new { @class = "text-danger" })
+                    </div>
+                </div><br />
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Contactpreference, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Contactpreference, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Contactpreference, "", new { @class = "text-danger" })
+                    </div>
+                </div><br />
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Register" class="btn btn-default" />
+                    </div>
+                    @ViewData["Message"]
+                </div>
+            </div>
+        }
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    </div>
+</body>
+
+
+

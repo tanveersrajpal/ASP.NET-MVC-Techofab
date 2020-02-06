@@ -1,0 +1,787 @@
+﻿@model Techofab_Website.Models.Courses
+
+@{
+    ViewBag.Title = "Courses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    div.certification-courses:hover {
+        background-color: #b3b3ff;
+        height: 620px;
+        width: auto;
+        text-align: left;
+        overflow: scroll;
+        
+    }
+    
+    ::-webkit-scrollbar{
+        width: 20px;
+    }
+    ::-webkit-scrollbar-track
+    {
+        
+    }
+    ::-webkit-scrollbar-thumb{
+        background: #b3b3ff;
+        border-radius: 25px;
+    }
+    ::-webkit-scrollbar-thumb:hover{
+        background: #6666ff;
+    }
+    div.language-courses:hover {
+        background-color:#b3b3ff;
+        height: 620px;
+        width: auto;
+        text-align: left;
+        
+        
+        
+    }
+    div.certification-courses{
+        background-color:#e6e6ff;
+        padding: 30px;
+        border: 1px solid #b3b3ff;      
+        margin: 10px;
+        height: 100px;
+        width: auto;
+        overflow: hidden;
+        transition: 1s;
+        border-radius: 25px;
+        
+        
+        
+    }
+    div.language-courses{
+        background-color:#e6e6ff;
+        padding: 30px;
+        border: 1px solid #ccccff;      
+        margin: 10px;
+        height: 100px;
+        width: auto;
+        overflow: hidden;
+        transition: height 1s;
+        border-radius: 25px;
+        
+    }
+    
+    .course-name{
+        font: auto;
+        font-family: Arial;
+        color: black;
+        font-weight: bold;
+        
+        
+        
+    }
+    #logo{
+        float: right;
+        height: 30px;
+        width: 30px;
+        transform: rotate(90deg);
+        
+        
+    }
+    
+    .description{
+        font-size: 150%;
+        color:white;
+        
+    }
+    .main-content {
+        background-color: #050835;
+        position: relative;
+        width: auto;
+        margin-top: -20px;
+        padding: 30px 50px;
+    }
+    body {
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    
+
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        max-width: 120%;
+        max-height: 120%;
+        min-width: 100%;
+        min-width: 100%;
+    }
+    
+    
+</style>
+<script>
+    var style = document.createElement('style');
+    style.innerHTML = `
+#logo{
+}`
+</script>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="~/Content/images/technology based website background video __ 5.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+        
+        <div class="main-content">
+            <h2 style="color:white; font-weight: bold">Certification courses list</h2><br />
+
+            <div>
+                <text class="description">
+                    Below is the list of certification courses that we provide.
+                </text>
+            </div><br />
+
+            <div class="certification-courses">
+                <text id="demo" class="course-name">
+                    MTA (Microsoft Techonology Associate)
+                    
+                        <img src="~/Content/images/ARROW.jpg" id="logo" onclick="MyFunction()" />
+                    
+                    
+                </text><br />
+                <br />
+                <br />
+                <br />
+                <text>
+                    Microsoft Technology Associate is a certification course that proves your fundamental ability in IT. Get hired,
+                    demonstrate clear business impact, and advance your skills. Microsoft offers a wide range of online certification programs designed to take your career to the next level.
+                    MTA is an entry-level examination that proves your fundamental ability in various fields.
+                </text>
+                <br />
+                <h4>
+                    Different MTA certifications
+                </h4>
+
+                <ul>
+                    <li>Exam 98-349  -  Windows Operating System Fundamental</li>
+                    <li>Exam 98-361  -  Software Development Fundamentals</li>
+                    <li>Exam 98-364  -  Database Fundamentals</li>
+                    <li>Exam 98-365  -  Windows Server Administration Fundamentals</li>
+                    <li>Exam 98-366  -  Networking Fundamentals</li>
+                    <li>Exam 98-367  -  Security Fundamentals</li>
+                    <li>Exam 98-368  -  Mobility and Devices Fundamentals</li>
+                    <li>Exam 98-375  -  HTML5 Application Development Fundamentals</li>
+                    <li>Exam 98-381  -  Introduction to Programming Using Python</li>
+                    <li>Exam 98-382  -  Introduction to Programming Using JavaScript</li>
+                    <li>Exam 98-383  -  Introduction to Programming Using HTML and CSS</li>
+                    <li>Exam 98-388  -  Introduction to Programming Using Java</li>
+                </ul>
+                <h4>
+                    Fees & Duration
+                </h4>
+                <text>
+                    (Note: We offer free demo class to all our students. To register for free demo class. Click on <a href="~/Registration/Index/">"Register"</a> and fill all your details.)
+                </text><br /><br />
+                <text>
+                    2 Weeks: $400 NZD<br />
+                    4 Weeks: $700 NZD<br />
+                    Unlimited: $900 NZD (Note: Unlimited class means you can attend the class as long as you want.)
+                </text>
+                <text>
+                    2 Weeks: $400 NZD<br />
+                    4 Weeks: $700 NZD<br />
+                    Unlimited: $900 NZD (Note: Unlimited class means you can attend the class as long as you want.)
+                </text>
+                <text>
+                    2 Weeks: $400 NZD<br />
+                    4 Weeks: $700 NZD<br />
+                    Unlimited: $900 NZD (Note: Unlimited class means you can attend the class as long as you want.)
+                </text>
+                <text>
+                    2 Weeks: $400 NZD<br />
+                    4 Weeks: $700 NZD<br />
+                    Unlimited: $900 NZD (Note: Unlimited class means you can attend the class as long as you want.)
+                </text>
+
+
+
+            </div>
+            <div class="certification-courses">
+                <text class="course-name">
+                    MCSA (Microsoft Certified Solution Associate)
+                    <img src="~/Content/images/ARROW.jpg" id="logo" />
+                </text><br />
+                <br />
+                <br />
+                <br />
+                <text>
+                    Microsoft Certified Solution Associate is a certification provided by Microsoft. This certification proves that you have good knowledge about different aspects of the IT world.
+                    Get hired, demonstrate clear business impact, and advance your skills. Microsoft offers a wide range of online certification programs designed to take your career to the next level.
+                </text>
+                <br />
+                <h4>
+                    Different MCSA certifications
+                </h4>
+
+                <ul>
+                    <li>MCSA: BI Reporting</li>
+                    <li>MCSA: Microsoft Dynamics 365 for Operations</li>
+                    <li>MCSA: Office 365</li>
+                    <li>MCSA: SQL 2016 BI Development</li>
+                    <li>MCSA: SQL 2016 Database Administration</li>
+                    <li>MCSA: SQL 2016 Database Development</li>
+                    <li>MCSA: SQL Server 2012/2014</li>
+                    <li>MCSA: Universal Windows Platform</li>
+                    <li>MCSA: Web Applications</li>
+                    <li>MCSA: Windows 10</li>
+                    <li>MCSAL Windows Server 2012</li>
+                    <li>MCSAL Windows Server 2016</li>
+                </ul>
+                <h4>
+                    Fees & Duration
+                </h4>
+                <text>
+                    (Note: We offer free demo class to all our students. To register for free demo class. Click on <a href="~/Registration/Index/">"Register"</a> and fill all your details.)
+                </text><br /><br />
+                <text>
+                    2 Weeks: $600 NZD<br />
+                    4 Weeks: $1100 NZD<br />
+                    Unlimited: $1300 NZD (Note: Unlimited class means you can attend the class as long as you want.)
+                </text>
+            </div>
+            <div class="certification-courses">
+                <text class="course-name" onclick="MyFunction">
+                    CCNA (Cisco Certified Network Associate)
+                    <img src="~/Content/images/ARROW.jpg" id="logo" />
+                </text><br />
+                <br />
+                <br />
+                <br />
+                <text>
+                    The Associate level of Cisco Certifications can begin directly with CCNA for network installation, operations ,and troubleshooting or
+                    CCDA for network design. Think of the Associate Level as the foundation level of networking certification.
+                </text>
+                <br />
+                <h4>
+                    Different CCNA certifications
+                </h4>
+
+                <ul>
+                    <li>CCND</li>
+                    <li>CCNA Cloud</li>
+                    <li>CCNA Collaboration</li>
+                    <li>CCNA Cyber Ops</li>
+                    <li>CCNA Data Center</li>
+                    <li>CCNA Industrial</li>
+                    <li>CCNA Routing & Switching</li>
+                    <li>CCNA Security</li>
+                    <li>CCNA Service Provider</li>
+                    <li>CCNA Wireless</li>
+
+                </ul>
+                <h4>
+                    Fees & Duration
+                </h4>
+                <text>
+                    (Note: We offer free demo class to all our students. To register for free demo class. Click on <a href="~/Registration/Index/">"Register"</a> and fill all your details.)
+                </text><br /><br />
+                <text>
+                    2 Weeks: $600 NZD<br />
+                    4 Weeks: $1100 NZD<br />
+                    Unlimited: $1300 NZD (Note: Unlimited class means you can attend the class as long as you want.)
+                </text>
+            </div>
+
+            <div class="certification-courses">
+                <text class="course-name">
+                    CCNP (Cisco Certified Network Professional)
+                    <img src="~/Content/images/ARROW.jpg" id="logo" />
+                </text><br />
+                <br />
+                <br />
+                <br />
+                <text>
+                    The Professional level is an advanced level of certification that shows more expertise with networking skills.
+                    Each certification covers a different technology to meet the needs of varying job roles.
+                </text>
+                <br />
+                <h4>
+                    Different CCNP certifications
+                </h4>
+
+                <ul>
+                    <li>CCDP</li>
+                    <li>CCNP Cloud</li>
+                    <li>CCNP Collaboration</li>
+                    <li>CCNP Data Center</li>
+                    <li>CCNP Routing & Switching</li>
+                    <li>CCNP Security</li>
+                    <li>CCNP Service Provider</li>
+                    <li>CCNP Wireless</li>
+
+                </ul>
+                <h4>
+                    Fees & Duration
+                </h4>
+                <text>
+                    (Note: We offer free demo class to all our students. To register for free demo class. Click on <a href="~/Registration/Index/">"Register"</a> and fill all your details.)
+                </text><br /><br />
+                <text>
+                    2 Weeks: $800 NZD<br />
+                    4 Weeks: $1500 NZD<br />
+                    Unlimited: $1700 NZD (Note: Unlimited class means you can attend the class as long as you want.)
+                </text>
+            </div>
+
+            <div class="certification-courses">
+                <text class="course-name">
+                    MCSD (Microsoft Certified Solution Developer)
+                    <img src="~/Content/images/ARROW.jpg" id="logo" />
+                </text><br />
+                <br />
+                <br />
+                <br />
+                <text>
+                    Microsoft Certified Solution Developer is certainly a higher level of certification as compared to MTA and MCSA. This certification will prove that you have sufficient skills
+                    that you can imply in the IT world.
+                </text>
+                <br />
+                <h4>
+                    Different MCSD certifications
+                </h4>
+
+                <ul>
+                    <li>MCSD: App Builder</li>
+
+                </ul>
+                <h4>
+                    Fees & Duration
+                </h4>
+                <text>
+                    (Note: We offer free demo class to all our students. To register for free demo class. Click on <a href="~/Registration/Index/">"Register"</a> and fill all your details.)
+                </text><br /><br />
+                <text>
+                    2 Weeks: $800 NZD<br />
+                    4 Weeks: $1500 NZD<br />
+                    Unlimited: $1700 NZD (Note: Unlimited class means you can attend the class as long as you want.)
+                </text>
+            </div>
+
+            <div class="certification-courses">
+                <text class="course-name">
+                    AWS (Amazon Web Services) Foundational Certifications
+                    <img src="~/Content/images/ARROW.jpg" id="logo" />
+                </text><br />
+                <br />
+                <br />
+                <br />
+                <text>
+                    AWS Certification validates cloud expertise to help professionals highlight in-demand skills and organizations build effective, innovative teams for cloud initiatives using AWS.
+                    Choose from diverse certification exams by role and specialty designed to empower individuals and teams to meet their unique goals.
+                </text>
+                <br />
+                <h4>
+                    Different AWS certifications
+                </h4>
+
+                <ul>
+                    <li>AWS Certified Cloud Practitioner</li>
+
+                </ul>
+                <h4>
+                    Fees & Duration
+                </h4>
+                <text>
+                    (Note: We offer free demo class to all our students. To register for free demo class. Click on <a href="~/Registration/Index/">"Register"</a> and fill all your details.)
+                </text><br /><br />
+                <text>
+                    2 Weeks: $500 NZD<br />
+                    4 Weeks: $900 NZD<br />
+                    Unlimited: $1100 NZD (Note: Unlimited class means you can attend the class as long as you want.)
+                </text>
+            </div>
+
+            <div class="certification-courses">
+                <text class="course-name">
+                    AWS (Amazon Web Services) Associate Certifications
+                    <img src="~/Content/images/ARROW.jpg" id="logo" />
+                </text><br />
+                <br />
+                <br />
+                <br />
+                <text>
+                    AWS Certification validates cloud expertise to help professionals highlight in-demand skills and organizations build effective, innovative teams for cloud initiatives using AWS.
+                    Choose from diverse certification exams by role and specialty designed to empower individuals and teams to meet their unique goals.
+                </text>
+                <br />
+                <h4>
+                    Different AWS certifications
+                </h4>
+
+                <ul>
+                    <li>AWS Certified Solution Architect - Associate</li>
+                    <li>AWS Certified Certified Developer - Associate</li>
+                    <li>AWS Certified SysOps Administrator - Associate</li>
+
+                </ul>
+                <h4>
+                    Fees & Duration
+                </h4>
+                <text>
+                    (Note: We offer free demo class to all our students. To register for free demo class. Click on <a href="~/Registration/Index/">"Register"</a> and fill all your details.)
+                </text><br /><br />
+                <text>
+                    2 Weeks: $1000 NZD<br />
+                    4 Weeks: $1900 NZD<br />
+                    Unlimited: $2100 NZD (Note: Unlimited class means you can attend the class as long as you want.)
+                </text>
+            </div>
+
+            <div class="certification-courses">
+                <text class="course-name">
+                    AWS (Amazon Web Services) Professional Certifications
+                    <img src="~/Content/images/ARROW.jpg" id="logo" />
+                </text><br />
+                <br />
+                <br />
+                <br />
+                <text>
+                    AWS Certification validates cloud expertise to help professionals highlight in-demand skills and organizations build effective, innovative teams for cloud initiatives using AWS.
+                    Choose from diverse certification exams by role and specialty designed to empower individuals and teams to meet their unique goals.
+                </text>
+                <br />
+                <h4>
+                    Different AWS certifications
+                </h4>
+
+                <ul>
+                    <li>AWS Certified Solution Architect - Professional</li>
+                    <li>AWS Certified DevOps Engineer - Professional</li>
+
+                </ul>
+                <h4>
+                    Fees & Duration
+                </h4>
+                <text>
+                    (Note: We offer free demo class to all our students. To register for free demo class. Click on <a href="~/Registration/Index/">"Register"</a> and fill all your details.)
+                </text><br /><br />
+                <text>
+                    2 Weeks: $1000 NZD<br />
+                    4 Weeks: $1900 NZD<br />
+                    Unlimited: $2100 NZD (Note: Unlimited class means you can attend the class as long as you want.)
+                </text>
+            </div>
+
+            <div class="certification-courses">
+                <text class="course-name">
+                    AWS (Amazon Web Services) Specialty Certifications
+                    <img src="~/Content/images/ARROW.jpg" id="logo" />
+                </text><br />
+                <br />
+                <br />
+                <br />
+                <text>
+                    AWS Certification validates cloud expertise to help professionals highlight in-demand skills and organizations build effective, innovative teams for cloud initiatives using AWS.
+                    Choose from diverse certification exams by role and specialty designed to empower individuals and teams to meet their unique goals.
+                </text>
+                <br />
+                <h4>
+                    Different AWS certifications
+                </h4>
+
+                <ul>
+                    <li>AWS Certified Advanced Networking - Specialty</li>
+                    <li>AWS Certified Big Data - Specialty</li>
+                    <li>AWS Certified Security - Specialty</li>
+                    <li>AWS Certified Machine Learning - Specialty</li>
+                    <li>AWS Certified Alexa Skill Builder - Specialty</li>
+                </ul>
+                <h4>
+                    Fees & Duration
+                </h4>
+                <text>
+                    (Note: We offer free demo class to all our students. To register for free demo class. Click on <a href="~/Registration/Index/">"Register"</a> and fill all your details.)
+                </text><br /><br />
+                <text>
+                    2 Weeks: $2500 NZD<br />
+                    4 Weeks: $4500 NZD<br />
+                    Unlimited: $5000 NZD (Note: Unlimited class means you can attend the class as long as you want.)
+                </text>
+            </div><br />
+
+            <div>
+                <hr />
+                <h2 style="color:white; font-weight: bold">
+                    Software and language courses.
+                </h2><br />
+            </div>
+
+            @*Below is the list of all software and programming courses...............................................................................................*@
+
+            <div>
+                <text class="description">Below is the complete list of all the software courses that we offer.</text>
+            </div><br />
+            <div class="language-courses">
+                <text class="course-name">
+                    ASP.NET (Web Forms, MVC, Web API)
+                    <img src="~/Content/images/ARROW.jpg" id="logo" />
+                </text>
+                <br /><br /><br /><br />
+                <text>
+                    ASP.NET is a widely used framework for the development of modern websites. If you are looking forward to be a web developer. Then this course is for you.
+                    In this course, we will teach you how to properly use ASP.NET framework in development environment.
+                </text>
+                <h4>What will you learn?</h4>
+                <ul>
+                    <li>Develop website using ASP.NET Web Forms</li>
+                    <li>Develop website using ASP.NET MVC (Model View Controller)</li>
+                    <li>Develop website using ASP.NET Web API</li>
+                    <li>Using SQL database to store data</li>
+                    <li>Developing forms using "GET" and "POST" method</li>
+                    <li>Hosting your website on the server</li>
+                </ul>
+                <text>
+                    (Note: This course will teach you the use of ASP.NET. To be eligible for this course, you should have basic knowledge about programming languages like, HTML, CSS, Javascript, C#)
+                </text>
+                <h4>
+                    Fees and duration
+                </h4>
+                <text>
+                    (Note: We offer free demo class to all our students. To register for free demo class. Click on <a href="~/Registration/Index/">"Register"</a> and fill all your details.)
+                </text><br /><br />
+                <text class="fees">
+                    2 weeks: $600 NZD <br />
+                    4 weeks: $1000 NZD<br />
+                </text>
+            </div>
+
+            <div class="language-courses">
+                <text class="course-name">
+                    C#.NET (Beginners)
+                    <img src="~/Content/images/ARROW.jpg" id="logo" />
+                </text>
+                <br /><br /><br /><br />
+                <text>
+                    C# is the most widely used language when it comes to programming. It is very similar to Java (one of the most popular language), if you have good knowledge
+                    about C#, you can develop wide range of applications, websites, and software. This course will give you step by step introduction to C#. This course is especially
+                    designed for people who have little to none knowledge regarding C#.
+
+                </text>
+                <h4>What will you learn?</h4>
+                <ul>
+                    <li>Basics of C# language</li>
+                    <li>Make you comfortable with programming terms like arguments, parameters, loops, etc</li>
+                    <li>To use C# in development of single page applications</li>
+                    <li>Wide range of C# libraries</li>
+                    <li>Fundamentals of object-oriented programming</li>
+                    <li>To use wide range of methods, functions, loops</li>
+                    <li>To use .NET framework for development of Windows form applications</li>
+                    <li>To publish you software in release environment</li>
+                </ul>
+                <text>
+                    (Note: This course is designed for beginners who have little to no knowledge regarding object-oriented programming. If you are a complete beginner than this course is for you)
+                </text>
+                <h4>
+                    Fees and duration
+                </h4>
+                <text>
+                    (Note: We offer free demo class to all our students. To register for free demo class. Click on <a href="~/Registration/Index/">"Register"</a> and fill all your details.)
+                </text><br /><br />
+                <text class="fees">
+                    2 weeks: $600 NZD <br />
+                    4 weeks: $1000 NZD<br />
+                    (Note: If you want to register more than 4 weeks. It will be $250 NZD per week afterwards)
+                </text>
+            </div>
+
+            <div class="language-courses">
+                <text class="course-name">
+                    C#.NET (Intermediate)
+                    <img src="~/Content/images/ARROW.jpg" id="logo" />
+                </text>
+                <br /><br /><br /><br />
+                <text>
+                    C# is the most widely used language when it comes to programming. It is very similar to Java (one of the most popular language), if you have good knowledge
+                    about C#, you can develop wide range of applications, websites, and software. This course will provide you indepth knowledge about C#, after taking this
+                    course you will have enough confidence to apply your skills in the development of real world applications.
+
+                </text>
+                <h4>What will you learn?</h4>
+                <ul>
+                    <li>Indepth knowledge about C#</li>
+                    <li>Using various aspects like polymorphism, inheritance, encapsulation, access-modifiers</li>
+                    <li>Defensive programming</li>
+                    <li>Better understading of data manipulation</li>
+                    <li>Better understanding of data security</li>
+                    <li>To use your skills in real world applications</li>
+                    <li>Complex problem-solving skills</li>
+
+                </ul>
+                <text>
+                    (Note: This course is designed for people who have prior knowledge regarding object-oriented programming. If you are a complete beginner we also provide C# Beginner's course)
+                </text>
+                <h4>
+                    Fees and duration
+                </h4>
+                <text>
+                    (Note: We offer free demo class to all our students. To register for free demo class. Click on <a href="~/Registration/Index/">"Register"</a> and fill all your details.)
+                </text><br /><br />
+                <text class="fees">
+                    2 weeks: $700 NZD <br />
+                    4 weeks: $1300 NZD<br />
+                    (Note: If you want to register more than 4 weeks. It will be $250 NZD per week afterwards)
+                </text>
+            </div>
+
+            <div class="language-courses">
+                <text class="course-name">
+                    SQL database
+                    <img src="~/Content/images/ARROW.jpg" id="logo" />
+                </text>
+                <br /><br /><br /><br />
+                <text>
+                    SQL is widely used language to communicate with relational database engine in which millions of user's data is being stored. SQL can be used along with the .NET framework to store data.
+                    Whether you are looking to be a software developer, or a website developer, you need to have a good understanding of working with SQL.
+                    This course will give you a brief practical knowledge regarding working with relation database using Microsoft Server 2019.
+
+                </text>
+                <h4>What will you learn?</h4>
+                <ul>
+                    <li>To use SQL commands for communication with database</li>
+                    <li>Inserting data in Database using SQL</li>
+                    <li>Microsoft SQL server skills</li>
+                    <li>Creating, deleting, retrieving, and editing database</li>
+                    <li>Connecting database to Web application and windows forms</li>
+                    <li>To use your skills in real world applications</li>
+                    <li>Complex problem-solving skills</li>
+
+                </ul>
+
+                <h4>
+                    Fees and duration
+                </h4>
+                <text>
+                    (Note: We offer free demo class to all our students. To register for free demo class. Click on <a href="~/Registration/Index/">"Register"</a> and fill all your details.)
+                </text><br /><br />
+                <text class="fees">
+                    2 weeks: $600 NZD <br />
+                    4 weeks: $1000 NZD<br />
+                    (Note: If you want to register more than 4 weeks. It will be $250 NZD per week afterwards)
+                </text>
+            </div>
+
+            <div class="language-courses">
+                <text class="course-name">
+                    HTML, CSS, and Javascript package
+                    <img src="~/Content/images/ARROW.jpg" id="logo" />
+                </text>
+                <br /><br /><br /><br />
+                <text>
+                    This course is a complete package that will teach you everything about Web designing and scripting. If you are looking to be a part of ever growing web development world, this course
+                    is for you. This is a detailed course that will teach you all the sytax and script that you need to learn. Once you have a good hand on HTML, CSS, and Javascript, you are all set
+                    to hit the market of front-end development.
+
+                </text>
+                <h4>What will you learn?</h4>
+                <ul>
+                    <li>HTML language</li>
+                    <li>CSS language</li>
+                    <li>Javascript</li>
+                    <li>To combine these scripting languages to develop a complete website</li>
+                    <li>Complete flow web development</li>
+
+
+                </ul>
+
+                <h4>
+                    Fees and duration
+                </h4>
+                <text>
+                    (Note: We offer free demo class to all our students. To register for free demo class. Click on <a href="~/Registration/Index/">"Register"</a> and fill all your details.)
+                </text><br /><br />
+                <text class="fees">
+                    2 weeks: $600 NZD <br />
+                    4 weeks: $1000 NZD<br />
+                    (Note: If you want to register more than 4 weeks. It will be $250 NZD per week afterwards)
+                </text>
+            </div>
+
+            <div class="language-courses">
+                <text class="course-name">
+                    Java (Beginners)
+                    <img src="~/Content/images/ARROW.jpg" id="logo" />
+                </text>
+                <br /><br /><br /><br />
+                <text>
+                    Java is one of the most popular language in the IT world. Whether it is web development, mobile development, or windows development, having a good knowledge of Java is mandatory. If you are
+                    willing to be a developer, having Java in your skill set will render your ability to find a satisfactory job.
+
+                </text>
+                <h4>What will you learn?</h4>
+                <ul>
+                    <li>Basics of Java language</li>
+                    <li>Make you comfortable with programming terms like arguments, parameters, loops, etc</li>
+                    <li>To use Java in development of single page applications</li>
+                    <li>Wide range of Java libraries</li>
+                    <li>Fundamentals of object-oriented programming</li>
+                    <li>To use wide range of methods, functions, loops</li>
+                    <li>To publish you software in release environment</li>
+
+
+                </ul>
+                <text>
+                    (Note: This course is designed for beginners who have little to no knowledge regarding object-oriented programming. If you are a complete beginner than this course is for you)
+                </text>
+                <h4>
+                    Fees and duration
+                </h4>
+
+                <text>
+                    (Note: We offer free demo class to all our students. To register for free demo class. Click on <a href="~/Registration/Index/">"Register"</a> and fill all your details.)
+                </text><br /><br />
+                <text class="fees">
+                    2 weeks: $600 NZD <br />
+                    4 weeks: $1000 NZD<br />
+                    (Note: If you want to register more than 4 weeks. It will be $250 NZD per week afterwards)
+                </text>
+            </div>
+
+            <div class="language-courses">
+                <text class="course-name">
+                    Java (Intermediate)
+                    <img src="~/Content/images/ARROW.jpg" id="logo" />
+                </text>
+                <br /><br /><br /><br />
+                <text>
+                    Java is one of the most popular language in the IT world. Whether it is web development, mobile development, or windows development, having a good knowledge of Java is mandatory. If you are
+                    willing to be a developer, having Java in your skill set will render your ability to find a satisfactory job.
+                </text>
+                <h4>What will you learn?</h4>
+                <ul>
+                    <li>Indepth knowledge about Java</li>
+                    <li>Using various aspects like polymorphism, inheritance, encapsulation, access-modifiers</li>
+                    <li>Defensive programming</li>
+                    <li>Better understading of data manipulation</li>
+                    <li>Better understanding of data security</li>
+                    <li>To use your skills in real world applications</li>
+                    <li>Complex problem-solving skills</li>
+
+                </ul>
+                <text>
+                    (Note: This course is designed for people who have prior knowledge regarding object-oriented programming. If you are a complete beginner we also provide Java Beginner's course)
+                </text>
+                <h4>
+                    Fees and duration
+                </h4>
+                <text>
+                    (Note: We offer free demo class to all our students. To register for free demo class. Click on <a href="~/Registration/Index/">"Register"</a> and fill all your details.)
+                </text><br /><br />
+                <text class="fees">
+                    2 weeks: $700 NZD <br />
+                    4 weeks: $1300 NZD<br />
+                    (Note: If you want to register more than 4 weeks. It will be $250 NZD per week afterwards)
+                </text>
+            </div>
+            <p>
+
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
+    
+    
+
+
+</body>

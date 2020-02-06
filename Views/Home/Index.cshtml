@@ -1,0 +1,109 @@
+﻿@Model.
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .content{
+        font-size: 140%;
+    }
+    .View-courses{
+        background-color:darkgreen;
+        font-size:150%;
+        font-family: Arial;
+        border: solid;
+        border-color: darkgreen;
+        margin: 5px 5px;
+        padding: 8px 10px;
+        text-decoration: solid;
+        color: white;
+        margin-left:auto;
+        
+
+        
+    }
+    div.Main-logo{
+        text-align:left;
+        margin-bottom: 50px;
+        
+    }
+    .content{
+        
+        color: white;
+    }
+    .main-content {
+        background-color: #012D30;
+        position: fixed;
+        width: 1200px;
+        margin-top: -20px;
+        padding: 30px 50px;
+    }
+
+    body {
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    #myVideo{
+        position: center;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-size: cover;
+        max-width: 120%; 
+        max-height: 120%;
+        min-width: 100%;
+        min-width: 100%;
+        background-repeat:repeat;
+
+    }
+   
+
+    #Button1 {
+        border-radius: 25px;
+        border-width: thin;
+        padding: 10px 15px;
+    }
+
+    #Button1:hover{
+        background-color: white;
+        color: green;
+        
+    }
+    
+    
+</style>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="~/Content/images/No Copyright, Copyright Free Videos, Motion Graphics, Background, Animation, Video Clips, Download.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    
+
+
+    <div class="main-content">
+        <div class="Main-logo">
+            <img src="~/Content/images/logo.png" />
+        </div>
+        <div>
+            <p class="content">
+                Techofab is a well known company for teaching students various courses which certainly bring them
+                succes. We have a huge team of passionate people willing to make your life brighter.
+            </p>
+            <p class="content">
+                We have various list of courses which range from 'Certification courses' to 'Software/Programming courses'. These courses are designed in a way
+                for maximum benefit and understanding of the students. No matter if you are willing to crack an examination, or learn some skills in IT. We have
+                various courses for you.
+            </p>
+            <p class="content">
+                To see the list of all course that we provide. Please click on the button below.
+            </p>
+        </div><br /><br />
+        <div>
+            <input id="Button1" type="button" value="View courses" class="View-courses" onclick="location.href='@Url.Action("Courses", "Home")'" />
+
+        </div>
+        <h2 class="counter">2122</h2>
+    </div>
+</body>
+    
+
